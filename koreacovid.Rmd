@@ -57,7 +57,7 @@ basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=sex))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+Theses current bargraphs about 100% of women are alive after covid, men arent too far behind 100% either. However results show a slighter bigger amount of dead males rather than women.
 
 ```{r}
 barchartGC(~result + Sex,data=kRdata)
@@ -65,7 +65,7 @@ barchartGC(~result + Sex,data=kRdata, type="percent")
 
 ```
 
-The barchart represent that male deaths related to covid make up about 60% of the total death and females make up the other 40% of deaths.
+The barchart represent that male deaths related to covid make up about 60% of the total death and females make up the other 40% of deaths.But it shows a fair amount of women who also die from covid.
   
 ## Numerical results
 
@@ -86,7 +86,9 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-Fishers exact test for count data shows that males are 2.3 times more likely to die from covid compared to women. Our p-value is a very small number which allows me to rejecet the null hypothesis that states covid deaths are independent of sex.
+Fishers exact test for count data shows that males are 2.3 times more likely to die from covid compared to women. Our p-value from the fishers exact test is 0.0009 which is a very small number this allows me to rejecet the null hypothesis that states covid deaths are independent of sex.
+
 
 ## Conclusions
 
+The null hypothesis stated that covid related deaths were independent to sex. In order to figure out for starters we used our Cat_Cat helper file for the graphical purposes in order to determine the variables : results, and sex.First we added a barchart in order to show where the amount of deaths per 100. From here it shows that roughly about 60% of deaths out of 100 were males and for females it was 40%. Then we ran the numerical results in order to have a precise number of covid related death between male and female. This gave us that 64 males die to covid compared to 36 females. This also means that we can state that males were more likely to die at a higher rate than females when catching covid-19. 
